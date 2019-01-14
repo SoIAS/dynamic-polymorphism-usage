@@ -1,0 +1,1 @@
+Written in single file with member function definitions inside class definition for "simplicity"

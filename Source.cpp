@@ -15,12 +15,14 @@ public:
 	virtual double area() const noexcept = 0;
 	virtual double circumference() const noexcept = 0;
 
-	virtual void print() const = 0
-	{
-		std::cout << "Area of " << typeid(*this).name() << " is " << area() << '\n';
-		std::cout << "Circumference of " << typeid(*this).name() << " is " << circumference() << '\n';
-	}
+	virtual void print() const = 0;
 };
+
+void Figure::print() const
+{
+	std::cout << "Area of " << typeid(*this).name() << " is " << area() << '\n';
+	std::cout << "Circumference of " << typeid(*this).name() << " is " << circumference() << '\n';
+}
 
 class Square final : public Figure
 {

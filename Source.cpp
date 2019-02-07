@@ -60,7 +60,7 @@ public:
 	{
 		if(side_length <= 0)
 		{
-			throw std::range_error{ "Side length cannot be <= 0" };
+			throw std::invalid_argument{ "Side length cannot be <= 0" };
 		}
 
 		side_length_ = side_length;
@@ -110,7 +110,7 @@ public:
 	{
 		if (radius <= 0)
 		{
-			throw std::range_error{ "Radius cannot be <= 0" };
+			throw std::invalid_argument{ "Radius cannot be <= 0" };
 		}
 
 		radius_ = radius;
